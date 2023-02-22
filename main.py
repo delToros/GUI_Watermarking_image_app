@@ -27,7 +27,6 @@ def select_file():
     img_new = Image.open(filename)
     r_image = img_new.resize((200, 200))
     n_image = ImageTk.PhotoImage(r_image)
-    # img_n = tk.PhotoImage(file='C:/Users/Nikita/Learning/WEB Dev/day-03/images/angela.png')
     canvas.itemconfig(image_container, image=n_image)
     canvas.img = n_image #  <- !!!!!! WITHOUT IT WOULD NOT WORK !!!!!! EXTREMELY IMPORTANT
 
@@ -101,9 +100,9 @@ def add_logo():
 
 # ----- UI ------ #
 # Create Canvas
-canvas = tk.Canvas(window, height=200, width=200, bg='skyblue')
+canvas = tk.Canvas(window, height=200, width=200, bg='#B3CFF2')
 canvas.grid(column=1, row=0)
-img = tk.PhotoImage(file='C:/Users/Nikita/Learning/WEB Dev/day-03/images/computer.png')
+img = tk.PhotoImage(file='assests/preview-icon.png')
 image_container = canvas.create_image(100, 100, image=img)
 
 # Create Buttons
